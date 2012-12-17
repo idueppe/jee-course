@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>de.crowdcode.training.jee</groupId>
+		<artifactId>rent-a-vehicle</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>rent-a-vehicle-ear</artifactId>
+	<packaging>ear</packaging>
+
+	<name>Rent-A-Vehicle EAR Module</name>
+
+	<dependencies>
+        <dependency>
+            <groupId>de.crowdcode.training.jee</groupId>
+            <artifactId>rent-a-vehicle-api</artifactId>
+        </dependency>
+		<dependency>
+			<groupId>de.crowdcode.training.jee</groupId>
+			<artifactId>rent-a-vehicle-ejb</artifactId>
+			<type>ejb</type>
+		</dependency>
+    </dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>2.8</version>
+				<configuration>
+					<version>6</version>
+					<defaultLibBundleDir>lib</defaultLibBundleDir>
+					<applicationName>rent-a-vehicle-ear</applicationName>
+					<modules>
+						<ejbModule>
+							<groupId>de.crowdcode.training.jee</groupId>
+							<artifactId>rent-a-vehicle-ejb</artifactId>
+							<!--<bundleFileName>vehicle-ejb</bundleFileName>-->
+						</ejbModule>
+                        <jarModule>
+                            <groupId>de.crowdcode.training.jee</groupId>
+                            <artifactId>rent-a-vehicle-api</artifactId>
+                            <!--<bundleFileName>vehicle-api</ bundleFileName>-->
+                        </jarModule>
+					</modules>
+				</configuration>
+			</plugin>
+ 		</plugins>
+	</build>
+
+</project>
