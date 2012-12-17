@@ -110,6 +110,7 @@
 		<module>rent-a-vehicle-api</module>
 		<module>rent-a-vehicle-ejb</module>
 		<module>rent-a-vehicle-ear</module>	
+		<module>rent-a-vehicle-client</module>
 	</modules>
 
 </project>
