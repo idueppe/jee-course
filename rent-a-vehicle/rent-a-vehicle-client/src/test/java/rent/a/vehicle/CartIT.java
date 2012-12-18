@@ -12,7 +12,7 @@ public class CartIT {
     public void testSayHelloTo() throws Exception {
         String appName = "rent-a-vehicle-ear";
         String moduleName = "rent-a-vehicle-ejb";
-        String beanName = "WarenkorbBean";
+        String beanName = "CartBean";
         Class<Cart> viewClass = Cart.class;
         
         Cart warenkorb = ServiceLocator.lookupStatefulService(appName, moduleName, "", beanName, viewClass);
@@ -29,6 +29,7 @@ public class CartIT {
         
         warenkorb.buy();
         
+        warenkorb.addProduct("XYZ");
         
     }
 

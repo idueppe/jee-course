@@ -55,7 +55,6 @@ public class ServiceLocator {
     private static Context getContext() throws NamingException {
         final Hashtable jndiProperties = new Hashtable();
         jndiProperties.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
-        final Context context = new InitialContext(jndiProperties);
-        return context;
+        return new InitialContext(jndiProperties);
     }
 }

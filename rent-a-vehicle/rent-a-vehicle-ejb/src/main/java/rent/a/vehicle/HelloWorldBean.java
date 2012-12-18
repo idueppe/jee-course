@@ -24,13 +24,12 @@ public class HelloWorldBean implements HelloWorld {
     
     @PostConstruct
     public void setUp() {
-        // Initialisierung des Beans 
         LOG.info("Hello World is constructed!");
     }
     
     @PreDestroy
     public void tearDown() {
-        
+        LOG.info("Hello World will be destroyed!");
     }
 
 }

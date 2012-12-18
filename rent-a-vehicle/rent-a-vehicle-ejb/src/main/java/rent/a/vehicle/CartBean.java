@@ -33,7 +33,7 @@ public class CartBean implements Serializable, Cart {
     @Remove
     public void buy() {
         for (String productId : listProducts()) {
-            log.info(productId);
+            log.info("buying: "+productId);
         }
         // do something meaningful.
     }
