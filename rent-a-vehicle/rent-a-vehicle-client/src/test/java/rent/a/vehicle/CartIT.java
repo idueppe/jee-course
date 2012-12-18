@@ -17,6 +17,8 @@ public class CartIT {
         
         warenkorb.addProduct("MacBook Pro");
         warenkorb.addProduct("IntelliJ IDEA 12");
+        warenkorb.addProduct("IntelliJ IDEA 11");
+        warenkorb.addProduct("IntelliJ IDEA 10");
 
         List<String> ids = warenkorb.listProducts();
         for (String product : ids) {
