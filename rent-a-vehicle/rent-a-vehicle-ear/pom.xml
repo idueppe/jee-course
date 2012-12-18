@@ -40,12 +40,12 @@
 						<ejbModule>
 							<groupId>de.crowdcode.training.jee</groupId>
 							<artifactId>rent-a-vehicle-ejb</artifactId>
-							<!--<bundleFileName>vehicle-ejb</bundleFileName>-->
+							<bundleFileName>rent-a-vehicle-ejb.jar</bundleFileName>
 						</ejbModule>
                         <jarModule>
                             <groupId>de.crowdcode.training.jee</groupId>
                             <artifactId>rent-a-vehicle-api</artifactId>
-                            <!--<bundleFileName>vehicle-api</ bundleFileName>-->
+                            <bundleFileName>rent-a-vehicle-api.jar</bundleFileName>
                         </jarModule>
 					</modules>
 				</configuration>
