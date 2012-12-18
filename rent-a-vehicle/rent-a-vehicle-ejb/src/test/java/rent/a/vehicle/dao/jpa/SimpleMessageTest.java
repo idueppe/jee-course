@@ -14,6 +14,12 @@ public class SimpleMessageTest {
     
     private EntityManagerFactory emf;
 
+    
+    @Before
+    public void setup() {
+        emf = Persistence.createEntityManagerFactory("vehicle-persistence-unit-test");
+    }
+    
     @Test
     public void testMessage() {
         Message msg = new Message();
@@ -39,11 +45,6 @@ public class SimpleMessageTest {
         System.out.println(msg.getText());
         
         em.close();
-    }
-
-    @Before
-    public void setup() {
-        emf = Persistence.createEntityManagerFactory("vehicle-persistence-unit-test");
     }
     
     @After
