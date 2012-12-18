@@ -1,4 +1,5 @@
-package rent.a.vehicle;
+package rent.a.vehicle.utils;
+
 
 public class RentAVehicleServiceLocator extends ServiceLocator {
     

@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import rent.a.vehicle.utils.ServiceLocator;
+
 public class HelloWorldIT {
 
     @Test

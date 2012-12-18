@@ -1,4 +1,4 @@
-package rent.a.vehicle;
+package rent.a.vehicle.utils;
 
 import java.util.Hashtable;
 

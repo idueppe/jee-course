@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.junit.Test;
 
+import rent.a.vehicle.utils.ServiceLocator;
+
 public class CartIT {
 
     @Test
@@ -11,9 +13,9 @@ public class CartIT {
         String appName = "rent-a-vehicle-ear";
         String moduleName = "rent-a-vehicle-ejb";
         String beanName = "WarenkorbBean";
-        Class<Warenkorb> viewClass = Warenkorb.class;
+        Class<Cart> viewClass = Cart.class;
         
-        Warenkorb warenkorb = ServiceLocator.lookupStatefulService(appName, moduleName, "", beanName, viewClass);
+        Cart warenkorb = ServiceLocator.lookupStatefulService(appName, moduleName, "", beanName, viewClass);
         
         warenkorb.addProduct("MacBook Pro");
         warenkorb.addProduct("IntelliJ IDEA 12");

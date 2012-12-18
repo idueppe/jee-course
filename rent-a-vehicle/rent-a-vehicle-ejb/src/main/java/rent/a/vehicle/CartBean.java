@@ -10,10 +10,10 @@ import javax.ejb.Remove;
 import javax.ejb.Stateful;
 
 @Stateful
-@Remote(Warenkorb.class)
-public class WarenkorbBean implements Serializable, Warenkorb {
+@Remote(Cart.class)
+public class CartBean implements Serializable, Cart {
     
-    private static final Logger log = Logger.getLogger(WarenkorbBean.class.getName());
+    private static final Logger log = Logger.getLogger(CartBean.class.getName());
     
     private static final long serialVersionUID = 1L;
 

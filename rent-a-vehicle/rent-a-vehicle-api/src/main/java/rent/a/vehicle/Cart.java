@@ -2,7 +2,7 @@ package rent.a.vehicle;
 
 import java.util.List;
 
-public interface Warenkorb {
+public interface Cart {
 
     public abstract void addProduct(String productId);
 
