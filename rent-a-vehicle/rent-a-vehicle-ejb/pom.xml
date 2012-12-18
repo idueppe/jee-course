@@ -21,7 +21,6 @@
 			<artifactId>rent-a-vehicle-api</artifactId>
 		</dependency>
 		
-		
 		<!-- Java EE Dependencies -->
 		
 		<dependency>
