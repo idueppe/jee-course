@@ -6,6 +6,7 @@ import javax.ejb.EJB;
 import javax.ejb.Remote;
 import javax.ejb.Stateless;
 
+import rent.a.vehicle.controller.ManufacturerAlreadyExistsException;
 import rent.a.vehicle.controller.ManufacturerController;
 import rent.a.vehicle.converter.ManufacturerConverter;
 import rent.a.vehicle.dto.ManufacturerDto;
@@ -27,7 +28,7 @@ public class ManufacturerControllerBean implements ManufacturerController{
     }
 
     @Override
-    public void newManufacturer(String name) {
+    public void newManufacturer(String name) throws ManufacturerAlreadyExistsException{
         manufacturerService.newManufacturer(name);
     }
 

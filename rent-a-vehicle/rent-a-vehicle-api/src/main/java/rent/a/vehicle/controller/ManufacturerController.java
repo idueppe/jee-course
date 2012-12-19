@@ -8,9 +8,8 @@ public interface ManufacturerController {
     
     public List<ManufacturerDto> findAll();
     
-    public void newManufacturer(String name);
+    public void newManufacturer(String name) throws ManufacturerAlreadyExistsException;
     
     public ManufacturerDto byName(String name);
-    
 
 }
