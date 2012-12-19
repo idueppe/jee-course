@@ -1,5 +1,6 @@
 package rent.a.vehicle.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -27,6 +28,9 @@ public class Manufacturer extends AbstractEntity {
     }
 
     public List<Vehicle> getVehicles() {
+        if (vehicles == null) {
+            vehicles = new ArrayList<>();
+        }
         return vehicles;
     }
 

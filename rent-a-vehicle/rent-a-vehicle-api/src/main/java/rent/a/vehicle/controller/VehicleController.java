@@ -8,7 +8,7 @@ public interface VehicleController {
 
     public List<VehicleDto> findByManufacturerName(String name);
 
-    public VehicleDto addVehicle(VehicleDto vehicle);
+    public VehicleDto addVehicle(VehicleDto vehicle) throws ManufacturerNotFoundException;
 
     public void deleteVehicle(VehicleDto vehicle);
 

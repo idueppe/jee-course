@@ -14,5 +14,5 @@ public interface ManufacturerService {
     public Manufacturer byName(String name);
 
     public abstract boolean doesManufacturerExist(String name);
-    
+
 }

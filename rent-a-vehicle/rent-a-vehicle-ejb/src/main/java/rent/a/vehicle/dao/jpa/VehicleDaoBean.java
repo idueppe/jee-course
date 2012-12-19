@@ -44,4 +44,12 @@ public class VehicleDaoBean implements VehicleDao {
         em.remove(entity);
     }
 
+    @Override
+    public List<? extends Vehicle> findByManufacturer(String name) {
+        String qlStmt = "SELECT v FROM Vehicle v WHERE v.manufacturer.name = :name";
+        TypedQuery<Vehicle> query = em.createQuery(qlStmt, Vehicle.class);
+        query.setParameter("name", name);
+        return query.getResultList();
+    }
+
 }
