@@ -2,7 +2,9 @@ package rent.a.vehicle.model;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Temporal;
@@ -31,6 +33,9 @@ public class Vehicle extends AbstractEntity {
     @Temporal(TemporalType.DATE)
     private Date inspectionDate;
     
+    @ManyToOne(cascade={CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    private Manufacturer manufacturer;
+    
     @Version
     private long version;
 
@@ -56,6 +61,14 @@ public class Vehicle extends AbstractEntity {
 
     public void setInspectionDate(Date inspectionDate) {
         this.inspectionDate = inspectionDate;
+    }
+
+    public Manufacturer getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(Manufacturer manufacturer) {
+        this.manufacturer = manufacturer;
     }
 
 }
