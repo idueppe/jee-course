@@ -1,0 +1,47 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+	
+	
+	<persistence-unit name="vehicle-persistence-unit-test"
+		transaction-type="RESOURCE_LOCAL">
+		<class>rent.a.vehicle.model.Vehicle</class>
+		<class>rent.a.vehicle.model.Manufacturer</class>
+		<class>rent.a.vehicle.model.Engine</class>
+		<class>rent.a.vehicle.model.Message</class>
+		<class>rent.a.vehicle.model.Attachment</class>
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
+			<property name="hibernate.connection.username" value="postgres" />
+			<property name="hibernate.connection.password" value="masterkey" />
+			<property name="hibernate.connection.url" value="jdbc:postgresql://localhost/rent-a-vehicle" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.use_sql_comments" value="false" />
+			<property name="hibernate.id.new_generator_mappings" value="true" />
+		</properties>
+	</persistence-unit>
+	
+	<persistence-unit name="vehicle-persistence-unit-mysql-test"
+		transaction-type="RESOURCE_LOCAL">
+		<class>rent.a.vehicle.model.Vehicle</class>
+		<class>rent.a.vehicle.model.Manufacturer</class>
+		<class>rent.a.vehicle.model.Engine</class>
+		<class>rent.a.vehicle.model.Message</class>
+		<class>rent.a.vehicle.model.Attachment</class>
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.connection.username" value="root" />
+			<property name="hibernate.connection.password" value="masterkey" />
+			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/rent-a-vehicle" />
+			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+		</properties>
+	</persistence-unit>  
+	
+</persistence>
