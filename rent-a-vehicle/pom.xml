@@ -30,6 +30,11 @@
 				<artifactId>rent-a-vehicle-api</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>de.crowdcode.training.jee</groupId>
+				<artifactId>rent-a-vehicle-client</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 
 			<!-- Java EE Dependency -->
 			<dependency>

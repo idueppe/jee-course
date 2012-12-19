@@ -24,6 +24,11 @@
 			<artifactId>rent-a-vehicle-api</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>de.crowdcode.training.jee</groupId>
+			<artifactId>rent-a-vehicle-ejb</artifactId>
+		</dependency>
+
 		<!-- JEE Client API Dependencies -->
 		
 		<dependency>
