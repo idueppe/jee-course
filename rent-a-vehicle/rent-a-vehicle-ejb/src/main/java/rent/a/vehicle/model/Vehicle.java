@@ -5,10 +5,21 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 
 @Entity
-public class Vehicle {
+@NamedQueries(value = { 
+    @NamedQuery(name=Vehicle.FIND_ALL, query="SELECT v FROM vehicle") 
+    
+    }
+    
+                
+)
+public class Vehicle implements Identifiable {
 
+    public static final String FIND_ALL = "Vehicle.findAll";
+    
     @Id
     @GeneratedValue
     private Long id;

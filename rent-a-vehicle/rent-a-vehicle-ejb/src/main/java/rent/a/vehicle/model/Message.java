@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Message {
+public class Message implements Identifiable {
     
     @Id
     @GeneratedValue
