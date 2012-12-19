@@ -5,6 +5,7 @@ import java.util.List;
 import javax.ejb.Local;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
@@ -47,9 +48,13 @@ public class ManufacturerDaoBean implements ManufacturerDao{
 
     @Override
     public Manufacturer findByName(String name) {
-        String qlStmt = "SELECT m FROM Manufacturer m WHERE m.name = :name";
-        TypedQuery<Manufacturer> query = em.createQuery(qlStmt, Manufacturer.class);
-        query.setParameter("name", name);
-        return query.getSingleResult();
+        try {
+            String qlStmt = "SELECT m FROM Manufacturer m WHERE m.name = :name";
+            TypedQuery<Manufacturer> query = em.createQuery(qlStmt, Manufacturer.class);
+            query.setParameter("name", name);
+            return query.getSingleResult();
+        } catch (NoResultException ex) {
+            return null;
+        }
     }
 }
