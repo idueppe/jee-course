@@ -38,4 +38,11 @@ public class Manufacturer extends AbstractEntity {
         this.vehicles = vehicles;
     }
 
+    public void addVehicle(Vehicle vehicle) {
+        if (vehicle != null) {
+            vehicle.setManufacturer(this);
+            getVehicles().add(vehicle);
+        }
+    }
+
 }

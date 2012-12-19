@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Version;
@@ -33,8 +34,13 @@ public class Vehicle extends AbstractEntity {
     @Temporal(TemporalType.DATE)
     private Date inspectionDate;
     
+    private Double price;
+    
     @ManyToOne(cascade={CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     private Manufacturer manufacturer;
+    
+    @OneToOne(cascade=CascadeType.ALL)
+    private Engine engine;
     
     @Version
     private long version;
@@ -70,5 +76,22 @@ public class Vehicle extends AbstractEntity {
     public void setManufacturer(Manufacturer manufacturer) {
         this.manufacturer = manufacturer;
     }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+
 
 }

@@ -8,6 +8,7 @@ public class Engine extends AbstractEntity {
     private static final long serialVersionUID = 1L;
 
     private String name;
+
     private EngineType engineType;
 
     public String getName() {
