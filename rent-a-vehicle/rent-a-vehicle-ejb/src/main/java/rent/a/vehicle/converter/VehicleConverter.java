@@ -19,7 +19,11 @@ public class VehicleConverter extends AbstractDefaultConverter<Vehicle, VehicleD
         target.setConstructionDate(source.getConstructionDate());
         target.setInspectionDate(source.getInspectionDate());
         
-        target.setManufacturerName("NOT DEFINED YET IN CONVERTER"); // TODO
+        if (source.getManufacturer() != null) {
+            target.setManufacturerName(source.getManufacturer().getName());
+        } else {
+            target.setManufacturerName("N/A");
+        }
     }
 
 }
