@@ -2,7 +2,7 @@ package rent.a.vehicle.dao.jpa;
 
 import java.util.List;
 
-import javax.ejb.Remote;
+import javax.ejb.Local;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -12,7 +12,7 @@ import rent.a.vehicle.dao.VehicleDao;
 import rent.a.vehicle.model.Vehicle;
 
 @Stateless
-@Remote(VehicleDao.class)
+@Local(VehicleDao.class)
 public class VehicleDaoBean implements VehicleDao {
     
     @PersistenceContext(name="rent-a-vehicle")
