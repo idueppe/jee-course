@@ -6,16 +6,17 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import rent.a.vehicle.model.Attachment;
 import rent.a.vehicle.model.Message;
-import rent.a.vehicle.util.jpa.PersistenceHelper;
 
 public class SimpleMessageTest {
     
@@ -23,7 +24,7 @@ public class SimpleMessageTest {
     
     @Before
     public void setup() {
-        emf = PersistenceHelper.createEntityManagerFactory("vehicle-persistence-unit-test");
+        emf = Persistence.createEntityManagerFactory("vehicle-persistence-unit-mysql-test");
     }
     
     @Test
@@ -80,7 +81,7 @@ public class SimpleMessageTest {
     }
 
     
-    @Test
+    @Ignore
     public void testFindMessage() {
         EntityManager em = emf.createEntityManager();
         
@@ -94,7 +95,7 @@ public class SimpleMessageTest {
         em.close();
     }
     
-    @Test
+    @Ignore
     public void testDetachMessage() {
         EntityManager em = emf.createEntityManager();
         Message msg = em.find(Message.class, 1L);
