@@ -12,4 +12,6 @@ public interface ManufacturerController {
     
     public ManufacturerDto byName(String name);
 
+    public boolean doManufacturerExists(String manufacturerName);
+
 }

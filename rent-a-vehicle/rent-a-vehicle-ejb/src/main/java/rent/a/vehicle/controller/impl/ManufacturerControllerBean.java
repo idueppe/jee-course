@@ -37,4 +37,9 @@ public class ManufacturerControllerBean implements ManufacturerController{
         return manufacturerConverter.convert(manufacturerService.byName(name));
     }
 
+    @Override
+    public boolean doManufacturerExists(String manufacturerName) {
+        return manufacturerService.doesManufacturerExist(manufacturerName);
+    }
+
 }
