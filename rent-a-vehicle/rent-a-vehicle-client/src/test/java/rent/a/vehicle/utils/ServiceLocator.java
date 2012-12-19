@@ -40,13 +40,13 @@ public class ServiceLocator {
      * @throws Exception
      */
     @SuppressWarnings("unchecked")
-    public static <T> T lookupStatelessService(String appName, String moduleName, String distinctName, String beanName, Class<T> viewClass) throws Exception {
+    public static <T> T lookupStatelessService(String appName, String moduleName, String distinctName, String beanName, Class<T> viewClass) throws NamingException {
         final Context context = getContext();
         return (T) context.lookup("ejb:" + appName + "/" + moduleName + "/" + distinctName + "/" + beanName + "!" + viewClass.getName() + "?stateless");
     }
 
     @SuppressWarnings("unchecked")
-    public static <T> T lookupStatefulService(String appName, String moduleName, String distinctName, String beanName, Class<T> viewClass) throws Exception {
+    public static <T> T lookupStatefulService(String appName, String moduleName, String distinctName, String beanName, Class<T> viewClass) throws NamingException  {
         final Context context = getContext();
         return (T) context.lookup("ejb:" + appName + "/" + moduleName + "/" + distinctName + "/" + beanName + "!" + viewClass.getName() + "?stateful");
     }
