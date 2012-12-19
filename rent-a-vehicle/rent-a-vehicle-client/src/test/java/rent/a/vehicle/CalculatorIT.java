@@ -1,8 +1,6 @@
 package rent.a.vehicle;
 
-import static org.junit.Assert.*;
-
-import javax.swing.JOptionPane;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -22,7 +20,6 @@ public class CalculatorIT {
         assertEquals(10.0, calculator.sum(),0.01);
         
         calculator.close();
-        
     }
 
     private Calculator getNewCalculatorInstance() throws Exception {
