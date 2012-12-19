@@ -1,6 +1,8 @@
 package rent.a.vehicle.model;
 
-public interface Identifiable {
+import java.io.Serializable;
+
+public interface Identifiable{
     
     public Long getId();
 

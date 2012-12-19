@@ -1,24 +1,15 @@
 package rent.a.vehicle.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 
 @Entity
-public class Manufacturer implements Identifiable {
+public class Manufacturer extends AbstractEntity {
 
-    @Id
-    @GeneratedValue
-    private Long id;
+    private static final long serialVersionUID = 1L;
+
+    @Column(unique=true)
     private String name;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
