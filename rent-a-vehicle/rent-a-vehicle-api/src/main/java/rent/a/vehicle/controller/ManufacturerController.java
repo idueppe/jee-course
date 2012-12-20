@@ -8,13 +8,12 @@ public interface ManufacturerController {
     
     public List<ManufacturerDto> findAll();
     
-    public void newManufacturer(String name) throws ManufacturerAlreadyExistsException;
-    
     public ManufacturerDto byName(String name);
 
     public boolean doManufacturerExists(String manufacturerName);
 
     public void update(ManufacturerDto selectedManufacturer);
 
+    public void newManufacturer(String name) throws ManufacturerAlreadyExistsException;
 
 }
