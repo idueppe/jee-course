@@ -20,34 +20,41 @@
 			<groupId>de.crowdcode.training.jee</groupId>
 			<artifactId>rent-a-vehicle-api</artifactId>
 		</dependency>
-		
+
 		<!-- Java EE Dependencies -->
-		
+		<dependency>
+			<groupId>org.jboss.spec.javax.ws.rs</groupId>
+			<artifactId>jboss-jaxrs-api_1.1_spec</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
 		<dependency>
 			<groupId>org.jboss.spec.javax.ejb</groupId>
 			<artifactId>jboss-ejb-api_3.1_spec</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.hibernate.javax.persistence</groupId>
 			<artifactId>hibernate-jpa-2.0-api</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		
-<!-- 		<dependency> -->
-<!-- 			<groupId>commons-logging</groupId> -->
-<!-- 			<artifactId>commons-logging</artifactId> -->
-<!-- 			<version>1.1.1</version> -->
-<!-- 		</dependency> -->
+
+		<!-- <dependency> -->
+		<!-- <groupId>commons-logging</groupId> -->
+		<!-- <artifactId>commons-logging</artifactId> -->
+		<!-- <version>1.1.1</version> -->
+		<!-- </dependency> -->
 
 		<!-- Test Dependencies -->
+
+
 
 	</dependencies>
 
