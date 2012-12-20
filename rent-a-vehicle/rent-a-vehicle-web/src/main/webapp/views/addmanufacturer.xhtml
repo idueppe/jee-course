@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+         		xmlns:rich="http://richfaces.org/rich"
+                template="/WEB-INF/templates/bootstrap.xhtml">
+
+    <ui:define name="navigation">
+        <h:form>
+            <ul class="nav nav-pills pull-right">
+                <li><h:commandLink action="/views/home">Start</h:commandLink></li>
+                <li class="active"><h:commandLink action="/views/manufacturers">Hersteller</h:commandLink></li>
+            </ul>
+        </h:form>
+    </ui:define>
+
+
+    <ui:define name="main">
+        <h1>Manufacturers</h1>
+        <div class="row-fluid">
+            <h:form>
+                <h:panelGrid id="fields" columns="3">
+
+
+                    <h:outputLabel for="manuName" value="Name des Herstellers:"/>
+                    <h:inputText id="manuName" 
+                    	value="#{manufacturerView.manufacturer.name}" 
+                    	required="true"
+                    	validator="#{manufacturerView.validateManufacturerName}">
+                    	<f:ajax event="keyup" render="nameMsg"/>
+                    </h:inputText>
+                    	
+                    <h:message id="nameMsg" for="manuName" errorClass="text-error" showDetail="true"/>
+
+                    <h:panelGrid columns="2">
+                        <h:commandLink action="#{manufacturerView.addManufacturer}" styleClass="btn btn-primary" rendered="#{!manufacturerView.editing}">Hinzufüge</h:commandLink>
+                        <h:commandLink action="#{manufacturerView.updateManufacturer}" styleClass="btn btn-primary" rendered="#{manufacturerView.editing}">Ändern</h:commandLink>
+                        <h:commandLink action="#{manufacturerView.cancelAdding}" styleClass="btn btn-danger" immediate="true">Abbrechen</h:commandLink>
+                    </h:panelGrid>
+                </h:panelGrid>
+
+            </h:form>
+        </div>
+    </ui:define>
+</ui:composition>

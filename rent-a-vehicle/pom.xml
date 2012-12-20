@@ -16,6 +16,7 @@
 		<module>rent-a-vehicle-client</module>
 		<module>rent-a-vehicle-ear</module>
 		<module>rent-a-vehicle-ejb</module>
+		<module>rent-a-vehicle-web</module>
 		<module>rent-a-vehicle-test</module>
 	</modules>
 
@@ -41,6 +42,13 @@
 				<artifactId>rent-a-vehicle-ejb</artifactId>
 				<version>${project.version}</version>
 				<type>ejb</type>
+			</dependency>
+
+			<dependency>
+				<groupId>de.crowdcode.training.jee</groupId>
+				<artifactId>rent-a-vehicle-web</artifactId>
+				<version>${project.version}</version>
+				<type>war</type>
 			</dependency>
 
 			<dependency>

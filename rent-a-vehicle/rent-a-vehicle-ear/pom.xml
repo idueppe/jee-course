@@ -15,16 +15,21 @@
 	<name>Rent-A-Vehicle EAR Module</name>
 
 	<dependencies>
-        <dependency>
-            <groupId>de.crowdcode.training.jee</groupId>
-            <artifactId>rent-a-vehicle-api</artifactId>
-        </dependency>
+		<dependency>
+			<groupId>de.crowdcode.training.jee</groupId>
+			<artifactId>rent-a-vehicle-api</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>de.crowdcode.training.jee</groupId>
 			<artifactId>rent-a-vehicle-ejb</artifactId>
 			<type>ejb</type>
 		</dependency>
-    </dependencies>
+		<dependency>
+			<groupId>de.crowdcode.training.jee</groupId>
+			<artifactId>rent-a-vehicle-web</artifactId>
+			<type>war</type>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<plugins>
@@ -42,15 +47,21 @@
 							<artifactId>rent-a-vehicle-ejb</artifactId>
 							<bundleFileName>rent-a-vehicle-ejb.jar</bundleFileName>
 						</ejbModule>
-                        <jarModule>
-                            <groupId>de.crowdcode.training.jee</groupId>
-                            <artifactId>rent-a-vehicle-api</artifactId>
-                            <bundleFileName>rent-a-vehicle-api.jar</bundleFileName>
-                        </jarModule>
+						<jarModule>
+							<groupId>de.crowdcode.training.jee</groupId>
+							<artifactId>rent-a-vehicle-api</artifactId>
+							<bundleFileName>rent-a-vehicle-api.jar</bundleFileName>
+						</jarModule>
+						<webModule>
+							<groupId>de.crowdcode.training.jee</groupId>
+							<artifactId>rent-a-vehicle-web</artifactId>
+							<bundleFileName>rent-a-vehicle-web.war</bundleFileName>
+							<contextRoot>rent-a-vehicle</contextRoot>
+						</webModule>
 					</modules>
 				</configuration>
 			</plugin>
- 		</plugins>
+		</plugins>
 	</build>
 
 </project>
