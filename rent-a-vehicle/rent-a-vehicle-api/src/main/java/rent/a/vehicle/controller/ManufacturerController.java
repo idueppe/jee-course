@@ -14,4 +14,7 @@ public interface ManufacturerController {
 
     public boolean doManufacturerExists(String manufacturerName);
 
+    public void update(ManufacturerDto selectedManufacturer);
+
+
 }

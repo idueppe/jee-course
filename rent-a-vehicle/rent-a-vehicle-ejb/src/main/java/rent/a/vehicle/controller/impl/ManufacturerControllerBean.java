@@ -42,4 +42,10 @@ public class ManufacturerControllerBean implements ManufacturerController{
         return manufacturerService.doesManufacturerExist(manufacturerName);
     }
 
+    @Override
+    public void update(ManufacturerDto selectedManufacturer) {
+        // TODO Auto-generated method stub
+        
+    }
+
 }
