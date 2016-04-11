@@ -4,3 +4,5 @@ jdk:
   - oraclejdk8
 services:
   - mysql
+before_script:
+  - "mysql -e 'create database rent-a-vehicle;'"
