@@ -73,7 +73,7 @@ public class SimpleMessageTest {
         
         EntityManager em = emf.createEntityManager();
         
-        Query query = em.createNativeQuery("SELECT * FROM message"); // SQL STATEMENT
+        Query query = em.createNativeQuery("SELECT * FROM Message"); // SQL STATEMENT
         
         List resultList = query.getResultList();
         System.out.println(resultList);
