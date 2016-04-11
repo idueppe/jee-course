@@ -16,7 +16,7 @@
 			<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
 			<property name="hibernate.connection.username" value="postgres" />
 			<property name="hibernate.connection.password" value="masterkey" />
-			<property name="hibernate.connection.url" value="jdbc:postgresql://localhost/rent-a-vehicle" />
+			<property name="hibernate.connection.url" value="jdbc:postgresql://localhost/rent_a_vehicle" />
 			<property name="hibernate.hbm2ddl.auto" value="create" />
 			<property name="hibernate.show_sql" value="false" />
 			<property name="hibernate.format_sql" value="true" />
@@ -37,7 +37,7 @@
 			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
 			<property name="hibernate.connection.username" value="root" />
 			<property name="hibernate.connection.password" value="" />
-			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/rent-a-vehicle" />
+			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/rent_a_vehicle" />
 			<property name="hibernate.hbm2ddl.auto" value="create" />
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="true" />
