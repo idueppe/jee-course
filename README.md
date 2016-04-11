@@ -1,4 +1,8 @@
 ## Examples and Demo-Application for Java EE Course
+
+# Build Status
+
+[![Build Status](https://travis-ci.org/idueppe/jee-course.svg?branch=master)](https://travis-ci.org/idueppe/jee-course)
     
 # License
 
